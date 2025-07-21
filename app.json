@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Expense-Tracker",
+    "name": "Expense Tracker",
     "slug": "Expense-Tracker",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "expensetracker",
@@ -10,13 +10,14 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
-    },
+    }, 
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#000000"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.skj1.ExpenseTracker"
     },
     "web": {
       "bundler": "metro",

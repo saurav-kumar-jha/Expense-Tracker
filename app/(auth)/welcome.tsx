@@ -37,7 +37,7 @@ const Welcome = () => {
           </Animated.View >
 
         <Animated.View entering={FadeInDown.duration(1500).delay(300).springify().damping(12)} style={styles.buttonContainer} >
-          <Button style={{marginBottom: 10}} onPress={()=>router.navigate("/(auth)/login")} >
+          <Button style={{marginBottom: 10}} onPress={()=>router.navigate("/(auth)/register")} >
             <Typo size={22} fontWeight={"700"} color={colors.neutral900} >Get started</Typo>
           </Button>
         </Animated.View>

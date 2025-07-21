@@ -1,6 +1,6 @@
 import { colors } from '@/constants/theme'
 import React from 'react'
-import { Image, StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 
 const Index = () => {
   // const router = useRouter()
@@ -13,7 +13,7 @@ const Index = () => {
 
   return (
     <View style={styles.container} >
-      <Image style={styles.logo} resizeMode="contain" source={require("../assets/images/splashImage.png")} />
+      {/* <Image style={styles.logo} resizeMode="contain" source={require("../assets/images/splashImage.png")} /> */}
     </View>
   )
 }
