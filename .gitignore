@@ -37,3 +37,10 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+
+.env
+services
+config
+utils
+types.ts
+assets/images
