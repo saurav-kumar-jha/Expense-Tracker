@@ -7,7 +7,7 @@ import { collection, deleteDoc, doc, getDoc, getDocs, orderBy, query, setDoc, Ti
 import { uploadFileToCloudinary } from "./imageService";
 import { createOrUpdateWallet } from "./walletService";
 
-export const createOrUpdateTransaction = async (
+export const createOrUpdateTransaction = async ( 
     transactionData: TransactionType
 ): Promise<ResponseType> => {
 

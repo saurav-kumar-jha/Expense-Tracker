@@ -1,4 +1,5 @@
 import Header from '@/components/Header'
+import Loading from '@/components/Loading'
 import ScreenWrapper from '@/components/ScreenWrapper'
 import Typo from '@/components/Typo'
 import { auth } from '@/config/firebase'
@@ -14,11 +15,15 @@ import * as Icons from 'phosphor-react-native'
 import React from 'react'
 import { Alert, StyleSheet, TouchableOpacity, View } from 'react-native'
 import Animated, { FadeInDown } from 'react-native-reanimated'
-const appId = process.env.EXPO_PUBLIC_FIREBASE_APP_ID
 const Profile = () => {
   const { user } = useAuth()
   const router = useRouter()
-  console.log("appId:",appId);
+  if(!user) 
+    return(
+      <ScreenWrapper>
+        <Loading/>
+      </ScreenWrapper>
+  ) 
   const accountOptions : accountOptionType[] = [
     {
       title:"Edit Profile",

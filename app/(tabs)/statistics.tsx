@@ -19,6 +19,13 @@ const Statistics = () => {
   const [chartData, setChartData] = useState([])
   const [transactions, setTransactions] = useState([])
 
+  console.log("User in statistics:", user)
+  if(!user) 
+    return(
+      <ScreenWrapper>
+        <Loading/>
+      </ScreenWrapper>
+  ) 
   useEffect(()=>{
     if(activeIndex == 0){
       getWeeklyStats()

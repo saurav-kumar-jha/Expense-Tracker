@@ -16,12 +16,20 @@ import { FlatList, StyleSheet, TouchableOpacity, View } from 'react-native'
 const Wallet = () => {
   const router = useRouter()
   const { user } = useAuth()
-  const {data: wallets, loading, error} = useFetchData<WalletType>("wallets",[
+  const constrainst = user?.uid ? [
     where("uid", "==" ,user?.uid),
     orderBy("created", "desc")
-  ])
+  ]:[]
+  const {data: wallets, loading, error} = useFetchData<WalletType>("wallets",constrainst)
+  if(!user) 
+    return(
+      <ScreenWrapper>
+        <Loading/>
+      </ScreenWrapper>
+  ) 
 
-  // console.log("wallets:", wallets.length);
+  console.log("Error in wallet:", error);
+  console.log("User in wallet:", user)
   
   const getTotalBalance = ()=>
     wallets.reduce((total, item)=>{
