@@ -1,50 +1,82 @@
-# Welcome to your Expo app 👋
+#💸 Welcome to your Expense Tracker App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A fully functional **React Native (Expo) + Firebase** app to track your income and expenses across multiple wallets. It features beautiful charts, authentication, and real-time data updates using Firestore.
+
+🔒 Auth, 💰 Wallets, 📊 Charts — all in one place.
+
+## 🚀 Features
+
+- 🔐 User Authentication (Firebase Auth)
+- 👛 Create & Manage Multiple Wallets
+- ➕ Add / Remove Income & Expenses
+- 📅 Track Weekly, Monthly, Yearly Trends
+- 📈 Visualize Data using Beautiful Charts
+- 📄 View All Transactions with History
+- 💾 Persistent Storage with Firestore
+- 🎨 Clean UI & Tailwind Styling (via NativeWind)
 
 ## Get started
 
-1. Install dependencies
+1. Clone the repo
+   ```bash
+    git clone https://github.com/saurav-kumar-jha/Expense-Tracker.git
+   ```
+
+2. Install dependencies
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. Start the app
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## 📁 Project Structure
+ src/
+├── auth/ # Authentication: Welcome, Login, Register screens
+├── components/ # Reusable UI components
+├── context/ # Auth and App context providers
+├── screens/ # Main app views: Dashboard, AddTransaction, Wallets, Charts
+├── utils/ # Firebase config, helper methods
+├── assets/ # App assets: images, icons
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## 🔧 Tech Stack
 
-When you're ready, run:
+| Category        | Technology                |
+|-----------------|---------------------------|
+| Framework       | React Native (Expo)       |
+| Auth            | Firebase Authentication   |
+| Database        | Firebase Firestore        |
+| Navigation      | Expo Router               |
+| Charts          | Victory Native / Recharts |
+| State           | Context API, useState     |
+| Styling         | NativeWind / StyleSheet   |
+| Storage         | AsyncStorage              |
 
-```bash
-npm run reset-project
-```
+---
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🔐 Firebase Setup
 
-## Learn more
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Create a new project
+3. Enable **Authentication** (Email/Password)
+4. Enable **Firestore Database**
+5. Add your web config in `firebaseConfig.ts`
 
-To learn more about developing your project with Expo, look at the following resources:
+```ts
+// src/utils/firebaseConfig.ts
+export const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
