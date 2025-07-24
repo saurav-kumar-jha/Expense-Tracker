@@ -35,6 +35,7 @@ A fully functional **React Native (Expo) + Firebase** app to track your income a
    ```
 
 ## 📁 Project Structure
+```bash
  src/
 ├── auth/ # Authentication: Welcome, Login, Register screens
 ├── components/ # Reusable UI components
@@ -43,7 +44,7 @@ A fully functional **React Native (Expo) + Firebase** app to track your income a
 ├── utils/ # Firebase config, helper methods
 ├── assets/ # App assets: images, icons
 
-
+```
 ---
 
 ## 🔧 Tech Stack
