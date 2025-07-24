@@ -1,4 +1,4 @@
-#💸 Welcome to your Expense Tracker App
+##💸 Welcome to your Expense Tracker App
 
 A fully functional **React Native (Expo) + Firebase** app to track your income and expenses across multiple wallets. It features beautiful charts, authentication, and real-time data updates using Firestore.
 
